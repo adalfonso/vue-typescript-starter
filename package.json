@@ -1,0 +1,43 @@
+{
+  "name": "vue-typescript-starter",
+  "version": "1.0.0",
+  "description": "Basic Vue/TypeScript starter template",
+  "main": "webpack.config.js",
+  "scripts": {
+    "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test",
+    "dev": "webpack --progress --hide-modules --mode development",
+    "hot": "webpack-dev-server --inline --hot",
+    "production": "webpack -p --progress --hide-modules",
+    "test": "mocha -r ts-node/register tests/**/*.test.ts",
+    "watch": "webpack --watch --progress --hide-modules --mode development"
+  },
+  "author": "Anthony Dalfonso <anthonyjdalfonso@gmail.com>",
+  "license": "BSD",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@types/chai": "^4.2.6",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^14.14.7",
+    "babel-loader": "^8.0.6",
+    "chai": "^4.2.0",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "mocha": "^6.2.2",
+    "node-sass": "^5.0.0",
+    "nyc": "^14.1.1",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3",
+    "vue-loader": "^15.9.5",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "vue": "^2.6.12"
+  }
+}
