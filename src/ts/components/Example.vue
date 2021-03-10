@@ -4,11 +4,13 @@
     {{ exampleprop }}
     {{ example_computed_prop }}
     {{ example_method() }}
+    <img :src="img_src" alt="" />
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
+import cat from "@/img/cat.png";
 
 // Additional Vue fixtures are passed into the decorator, e.g. components
 @Component({
@@ -23,6 +25,10 @@ export default class ExampleComponent extends Vue {
   get example_computed_prop(): number {
     return this.exampleprop.length;
   }
+
+  get img_src(): number {
+    return cat;
+  }
   // Methods
   example_method(): string {
     return "[ example method output ]";
@@ -30,4 +36,10 @@ export default class ExampleComponent extends Vue {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+div {
+  img {
+    width: 100px;
+  }
+}
+</style>
